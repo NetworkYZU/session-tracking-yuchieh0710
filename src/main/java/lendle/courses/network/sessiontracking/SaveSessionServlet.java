@@ -6,10 +6,8 @@
 package lendle.courses.network.sessiontracking;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author lendle
  */
-@WebServlet(name = "SaveCookieServlet", urlPatterns = {"/saveCookie"})
-public class SaveCookieServlet extends HttpServlet {
+@WebServlet(name = "SaveSessionServlet", urlPatterns = {"/saveSession"})
+public class SaveSessionServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,9 +32,9 @@ public class SaveCookieServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
-        //建立 cookie 並且儲存
+        //建立 session 並且儲存
         ///////////////////////////////////////////////////////////////
-        response.sendRedirect("cookie.jsp");
+        response.sendRedirect("session.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
